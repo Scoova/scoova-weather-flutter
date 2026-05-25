@@ -1,6 +1,6 @@
 name: scoova_weather
-description: Flutter / Dart weather SDK — open-meteo compatible client for weather.scoo-va.info. Current, hourly + daily forecasts, locale-aware.
-version: 1.1.0
+description: Flutter / Dart weather SDK — open-meteo compatible client for the Scoova weather gateway. Current, hourly + daily forecasts, locale-aware.
+version: 1.1.1
 homepage: https://scoo-va.info
 repository: https://github.com/Scoova/scoova-weather-flutter
 issue_tracker: https://github.com/Scoova/scoova-weather-flutter/issues

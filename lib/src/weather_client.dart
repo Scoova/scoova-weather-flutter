@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:io' show Platform;
 import 'package:http/http.dart' as http;
 
-const _defaultBase = 'https://weather.scoo-va.info';
+const _defaultBase = 'https://api.scoo-va.info/api/v1/weather';
 
 /// Variables you can request via `current` / `hourly` / `daily`. Subset of
 /// open-meteo — extend at the call site if you need anything else (the server
@@ -98,11 +98,12 @@ class WeatherException implements Exception {
   String toString() => 'WeatherException(${statusCode ?? '-'}): $message';
 }
 
-/// Open-meteo compatible client for `weather.scoo-va.info`.
+/// Open-meteo compatible client for the Scoova weather gateway.
 ///
-/// Point [baseUrl] at the gateway (`https://api.scoo-va.info/v1/weather`) and
-/// pass [apiKey] for key-enforced calls. Reads `SCOOVA_API_KEY` from
-/// `Platform.environment` when [apiKey] is null (on platforms that expose it).
+/// Defaults to the central Scoova gateway
+/// (`https://api.scoo-va.info/api/v1/weather`). Pass [apiKey] for
+/// key-enforced calls. Reads `SCOOVA_API_KEY` from `Platform.environment`
+/// when [apiKey] is null (on platforms that expose it).
 ///
 /// [locale] sets the default locale (BCP-47 codes — `en`, `en-US`, `fr`,
 /// `es`, `de`, `it`, `pt-BR`, `nl`, `ar`, `ar-EG`, `ar-SA`, plus regional
