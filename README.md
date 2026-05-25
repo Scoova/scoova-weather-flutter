@@ -1,6 +1,6 @@
 # scoova_weather (Flutter / Dart)
 
-Open-meteo compatible Flutter / Dart client for `weather.scoo-va.info`.
+Compatible Flutter / Dart client for `weather.scoo-va.info`.
 
 ## Install
 

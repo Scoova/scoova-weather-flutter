@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 const _defaultBase = 'https://api.scoo-va.info/api/v1/weather';
 
 /// Variables you can request via `current` / `hourly` / `daily`. Subset of
-/// open-meteo — extend at the call site if you need anything else (the server
+/// scoova weather — extend at the call site if you need anything else (the server
 /// will accept the raw name even if it's not listed here).
 class WeatherVar {
   final String name;
@@ -98,7 +98,7 @@ class WeatherException implements Exception {
   String toString() => 'WeatherException(${statusCode ?? '-'}): $message';
 }
 
-/// Open-meteo compatible client for the Scoova weather gateway.
+/// Compatible client for the Scoova weather gateway.
 ///
 /// Defaults to the central Scoova gateway
 /// (`https://api.scoo-va.info/api/v1/weather`). Pass [apiKey] for
@@ -271,7 +271,7 @@ class WeatherClient {
 
 enum WeatherCondition { clear, cloudy, fog, drizzle, rain, snow, thunderstorm, unknown }
 
-/// Map an open-meteo WMO weather code to a coarse-grained condition label.
+/// Map an scoova weather WMO weather code to a coarse-grained condition label.
 WeatherCondition decodeWeatherCode(num? code) {
   if (code == null) return WeatherCondition.unknown;
   final c = code.toInt();
