@@ -8,9 +8,7 @@ All notable changes to `scoova_weather` are documented here.
 ## 1.1.0 — 2026-05-25
 
 - Initial public release of the standalone Flutter / Dart package
-  `Scoova/scoova-weather-flutter`. Lifts the legacy unified-SDK
-  `WeatherAPI` namespace out of the old `scoova` package into its own
-  pub.dev artifact.
+  `Scoova/scoova-weather-flutter`. dev artifact.
 - API surface parity with `@scoova/weather` (web), `scoova-weather-android`,
   `scoova-weather-react-native`, and `ScoovaWeather` (iOS):
   `WeatherClient` with `current()`, `hourly()`, `daily()`,
